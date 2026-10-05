@@ -217,8 +217,8 @@
 
     <h1>gaze / xy</h1>
     <p class="sub">
-      Uses your webcam to track the position of your gaze. Sends it live to the audio engine as x/y.
-      If left/right or up/down feel backwards, use the invert buttons above.
+      Uses webcam to track the position of your gaze/head. Sends it live to the audio engine as x/y.
+      If left/right or up/down are backward, use the invert buttons above.
     </p>
 
     <div class="status">
@@ -365,7 +365,7 @@
     const s = {};
     for (const c of categories) s[c.categoryName] = c.score;
 
-    // positive h = looking toward subject's right, positive v = looking up
+    // positive h = looking toward the right, positive v = looking up
     const h = ((s.eyeLookOutRight - s.eyeLookInRight) +
                (s.eyeLookInLeft  - s.eyeLookOutLeft)) / 2;
     const v = ((s.eyeLookUpLeft  - s.eyeLookDownLeft) +
